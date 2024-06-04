@@ -263,7 +263,7 @@ export default function Home() {
       setbtntxt('Check');
     };
 
-    // Event listeners
+    // Event listenerss
     window.addEventListener('resize', handleResize);
     window.addEventListener('keydown', handleKeyDown);
     window.addEventListener('wheel', handleScroll);
