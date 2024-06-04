@@ -23,34 +23,30 @@ export default function Home() {
   var domainpart2 = ".com";
 
   // Refs
-  const playaudioRef = useRef("no");
   const audioRef = useRef(null);
 
   // Helper functions
-  const simulateScrollUp = () => {
-    window.dispatchEvent(new WheelEvent('wheel', { deltaY: -100 }));
+  const simulateScroll = (direction) => {
+    const deltaY = direction === 'up' ? -100 : 100;
+    window.dispatchEvent(new WheelEvent('wheel', { deltaY }));
   };
 
-  const simulateScrollDown = () => {
-    window.dispatchEvent(new WheelEvent('wheel', { deltaY: 100 }));
-  };
-
-  const startaudio = () => {
-    audioRef.current.play();
-  }
-
-  const stopaudio = () => {
-    audioRef.current.pause();
-    audioRef.current.currentTime = 0; 
-  }
+  const toggleAudio = useCallback((play) => {
+    if (play) {
+      audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+  }, [audioRef]);
 
   // Event handlers
-  const handleInputChange = (event) => {
+  const handleInputChange = useCallback( (event) => {
     setInputValue(event.target.value);
     setIsActive(false);
     setbtntxt("Check");
-    stopaudio();
-  };
+    toggleAudio(false);
+  }, [setIsActive, setbtntxt, setInputValue, toggleAudio]);
 
 
   const displayInput = useCallback(() => {
@@ -94,28 +90,28 @@ export default function Home() {
       if (wordCount === 7) {
         result = "THALA For A Reason!";
         flag = true;
-        playaudioRef.current = "yes";
+        toggleAudio(true);
       } else if (letters) {
         result = "THALA For A Reason!";
         flag = true;
-        playaudioRef.current = "yes";
+        toggleAudio(true);
       } else if (no == 7) {
         result = "THALA For A Reason!";
         flag = true;
-        playaudioRef.current = "yes";
+        toggleAudio(true);
       } else if(no % 7 == 0){
         result = "THALA For A Reason!";
         flag = true;
-        playaudioRef.current = "yes";
+        toggleAudio(true);
       } else if (sum_of_digits == 7){
         result = "THALA For A Reason!";
         flag = true;
-        playaudioRef.current = "yes";
+        toggleAudio(true);
       } else if(!isAlphabet(input)){
         if(sum_of_digits !== 0 && sum_of_digits % 7 === 0){
           result = "THALA For A Reason!";
           flag = true;
-          playaudioRef.current = "yes";
+          toggleAudio(true);
         }
       }
 
@@ -127,7 +123,7 @@ export default function Home() {
         if(two === arr[n]){
           result = "THALA For A Reason!";
           flag = true;
-          playaudioRef.current = "yes";
+          toggleAudio(true);
           break;
         }
       }
@@ -135,79 +131,79 @@ export default function Home() {
       if(two === "ranchi"){
         result = "Birth Place of Dhoni";
         flag = true;
-        playaudioRef.current = "yes";
+        toggleAudio(true);
       } else if(two === "07071981" || two === "771981"){
         result = "Dhoni's Birth Date";
         flag = true;
-        playaudioRef.current = "yes";
+        toggleAudio(true);
       } else if(two === "19111988" || two === "11191988"){
         result = "Dhoni's Wife's Birth Date";
         flag = true;
-        playaudioRef.current = "yes";
+        toggleAudio(true);
       } else if(two === "06022015" || two === "02062015" || two === "622015" || two === "262015"){
         result = "Ziva's Birth Date";
         flag = true;
-        playaudioRef.current = "yes";
+        toggleAudio(true);
       } else if(two === "23122004" || two === "12232004"){
         result = "Dhoni's Debut in Cricket";
         flag = true;
-        playaudioRef.current = "yes";
+        toggleAudio(true);
       } else if(two === "1981"){
         result = "Dhoni's Birth Year";
         flag = true;
-        playaudioRef.current = "yes";
+        toggleAudio(true);
       } else if(two === "ziva"){
         result = "Dhoni's Daughter";
         flag = true;
-        playaudioRef.current = "yes";
+        toggleAudio(true);
       } else if(two === "DAV Jawahar Vidya Mandir"){
         result = "Dhoni's School in Ranchi";
         flag = true;
-        playaudioRef.current = "yes";
+        toggleAudio(true);
       } else if(two === "2007"){
         result = "India won ICC World T20 and won CommonWealth Bank Series in 2007"+string;
         flag = true;
-        playaudioRef.current = "yes";
+        toggleAudio(true);
       } else if(two === "2008"){
         result = "India won Border-Gavaskar Trophy in 2008"+string;
         flag = true;
-        playaudioRef.current = "yes";
+        toggleAudio(true);
       } else if(two === "2009"){
         result = "India won Test Series in New Zealand after 41 Years in 2009"+string;
         flag = true;
-        playaudioRef.current = "yes";
+        toggleAudio(true);
       } else if(two === "2010"){
         result = "India won Asia Cup, Champions League T20, Border-Gavaskar Trophy and CSK won 1st IPL Trophy in 2010"+string;
         flag = true;
-        playaudioRef.current = "yes";
+        toggleAudio(true);
       } else if(two === "2011"){
         result = "India won ICC Cricket World Cup and CSK won 2nd IPL Trophy in 2011"+string;
         flag = true;
-        playaudioRef.current = "yes";
+        toggleAudio(true);
       } else if(two === "2013"){
         result = "India won ICC Champions Trophy and Border-Gavaskar Trophy in 2013"+string;
         flag = true;
-        playaudioRef.current = "yes";
+        toggleAudio(true);
       } else if(two === "2014"){
         result = "India won Champions League T20 in 2014"+string;
         flag = true;
-        playaudioRef.current = "yes";
+        toggleAudio(true);
       } else if(two === "2016"){
         result = "India won Asia Cup in 2016"+string;
         flag = true;
-        playaudioRef.current = "yes";
+        toggleAudio(true);
       } else if(two === "2018"){
         result = "CSK won 3rd IPL Trophy in 2018"+string;
         flag = true;
-        playaudioRef.current = "yes";
+        toggleAudio(true);
       } else if(two === "2021"){
         result = "CSK won 4th IPL Trophy in 2021"+string;
         flag = true;
-        playaudioRef.current = "yes";
+        toggleAudio(true);
       } else if(two === "2023"){
         result = "CSK won 5th IPL Trophy in 2023"+string;
         flag = true;
-        playaudioRef.current = "yes";
+        toggleAudio(true);
       }
   
       if(flag === false){
@@ -222,16 +218,12 @@ export default function Home() {
     //button text change
     if (btntxt === 'Check') {
       setbtntxt('Stop');
-      if (playaudioRef.current === "yes") {
-        startaudio();
-      }
     } else {
-      playaudioRef.current = "no";
       setbtntxt('Check');
-      stopaudio();
+      toggleAudio(false);
     }
     
-  }, [inputValue, btntxt, isActive]);
+  }, [inputValue, btntxt, isActive, setIsActive, setbtntxt, setRes, toggleAudio]);
 
   // useEffect hook
   useEffect(() => {
@@ -282,7 +274,7 @@ export default function Home() {
     }
 
     // Simulate scroll up after a delay
-    setTimeout(simulateScrollUp, 3500);
+    setTimeout(simulateScroll('up'), 3500);
 
     // Cleanup function
     return () => {
@@ -302,13 +294,12 @@ export default function Home() {
             
             <a href="/">Thala For A Reason</a>
             <ul>
-              <li><a href="#" className={styles.h} onClick={simulateScrollUp}>Home</a></li>
-              <li><a href="#" className={styles.a} onClick={simulateScrollDown}>About</a></li>
+              <li><a href="#" className={styles.h} onClick={() => simulateScroll('up')}>Home</a></li>
+              <li><a href="#" className={styles.a} onClick={() => simulateScroll('down')}>About</a></li>
             </ul>
           </header>
 
           <div className={styles.all}>
-            <div id="home">
               <form action="#">
                 <div className={styles.inputWrapper}>
                   <div className={scrollDirection === 'down' ? styles.input : styles.inputActive}>
@@ -342,7 +333,6 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       )}
