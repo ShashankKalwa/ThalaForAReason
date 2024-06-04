@@ -522,17 +522,17 @@
 }
 
 .insta {
-  background: url(../app/insta.png);
+  background: url(../app/assets/insta.png);
   transform: translateX(10%);
 }
 
 .linked {
-  background: url(../app/linked.png);
+  background: url(../app/assets/linked.png);
   transform: translateX(117.5%);
 }
 
 .github {
-  background: url(../app/github.png);
+  background: url(../app/assets/github.png);
   transform: translateX(225%);
 }
 
