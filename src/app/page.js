@@ -274,7 +274,7 @@ export default function Home() {
     }
 
     // Simulate scroll up after a delay
-    setTimeout(simulateScroll('up'), 15500);
+    setTimeout(() => simulateScroll('up'), 3500);
 
     // Cleanup function
     return () => {
