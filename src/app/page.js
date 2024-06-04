@@ -291,7 +291,6 @@ export default function Home() {
       ) : (
         <div className={scrollDirection === 'down' ? styles.screenActive : styles.screen} >
           <header className={scrollDirection === 'down' ? styles.headerActive : styles.header}>
-            
             <a href="/">Thala For A Reason</a>
             <ul>
               <li><a href="#" className={styles.h} onClick={() => simulateScroll('up')}>Home</a></li>
@@ -311,12 +310,12 @@ export default function Home() {
                     <div className={isActive ? styles.activeClass : styles.inactiveClass}>{res}</div>
 
                   </div>
-                  <Image className={scrollDirection === 'down' ? styles.imgActive : styles.img} src="/images/seven.png" alt="Logo" width={1} height={1} unoptimized= {true} onClick={() => window.open('https://en.wikipedia.org/wiki/MS_Dhoni')}/>
+                  <Image className={scrollDirection === 'down' ? styles.imgActive : styles.img} src="/images/seven.png" alt="Logo" width={300} height={300} unoptimized= {true} loading='lazy' onClick={() => window.open('https://en.wikipedia.org/wiki/MS_Dhoni')}/>
                 </div>
               </form>
               <div className={styles.divider}></div>
               <div className={styles.abtWrapper}>
-                <Image className={hasScrolled === false ? styles.logo : scrollDirection === 'down' ? styles.logo : styles.logoActive} src="/images/csk.png" alt="Logo" width={275} height={275} unoptimized={true} priority={true} onClick={() => window.open('https://www.chennaisuperkings.com/')}/>
+                <Image className={hasScrolled === false ? styles.logo : scrollDirection === 'down' ? styles.logo : styles.logoActive} src="/images/csk.png" alt="Logo" width={275} height={275} unoptimized={true} priority={true} loading='eager' onClick={() => window.open('https://www.chennaisuperkings.com/')}/>
                 <div className={scrollDirection === 'down' ? styles.aboutActive : styles.about}>
                 <div className={styles.atitle}>A-b-o-u-t</div>
                   <div className={styles.abt}>

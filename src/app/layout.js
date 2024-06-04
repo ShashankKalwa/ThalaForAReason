@@ -28,6 +28,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preload" as="script" href="page.js"/>
+        <link rel="preload" as="style" href="page.module.css"/>
+      </head>
       <body className={inter.className}>
         {children}
         <SpeedInsights />
