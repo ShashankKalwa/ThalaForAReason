@@ -291,7 +291,7 @@ export default function Home() {
   return (
     <>
       {isMobile ? (
-        <div className={styles.dexsitenote}><h1>! Please open in the PC or else enable desktop site option and rotate your phone to landscape view then refresh the page once to view this page properly !</h1></div>
+        <div className={styles.dexsitenote}><h1>!! Please open in the PC !! <br/> OR <br/> !! Else enable desktop site option and rotate your phone to landscape view then refresh the page once to view this page properly !!</h1></div>
       ) : (
         <div className={scrollDirection === 'down' ? styles.screenActive : styles.screen} >
           <header className={scrollDirection === 'down' ? styles.headerActive : styles.header}>
