@@ -1,9 +1,9 @@
 // Importing necessary libraries and styles
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react'
 
-import Image from 'next/image';
-import styles from './page.module.css';
+import Image from 'next/image'
+import styles from './page.module.css'
 
 // Main function
 export default function Home() {
@@ -316,12 +316,12 @@ export default function Home() {
                     <div className={isActive ? styles.activeClass : styles.inactiveClass}>{res}</div>
 
                   </div>
-                  <Image className={scrollDirection === 'down' ? styles.imgActive : styles.img} src="/seven.png" alt="Logo" width={1} height={1} unoptimized= {true} onClick={() => window.open('https://en.wikipedia.org/wiki/MS_Dhoni')}/>
+                  <Image className={scrollDirection === 'down' ? styles.imgActive : styles.img} src="/images/seven.png" alt="Logo" width={1} height={1} unoptimized= {true} onClick={() => window.open('https://en.wikipedia.org/wiki/MS_Dhoni')}/>
                 </div>
               </form>
               <div className={styles.divider}></div>
               <div className={styles.abtWrapper}>
-                <Image className={hasScrolled === false ? styles.logo : scrollDirection === 'down' ? styles.logo : styles.logoActive} src="/csk.png" alt="Logo" width={275} height={275} unoptimized={true} onClick={() => window.open('https://www.chennaisuperkings.com/')}/>
+                <Image className={hasScrolled === false ? styles.logo : scrollDirection === 'down' ? styles.logo : styles.logoActive} src="/images/csk.png" alt="Logo" width={275} height={275} unoptimized={true} priority={true} onClick={() => window.open('https://www.chennaisuperkings.com/')}/>
                 <div className={scrollDirection === 'down' ? styles.aboutActive : styles.about}>
                 <div className={styles.atitle}>A-b-o-u-t</div>
                   <div className={styles.abt}>
