@@ -191,15 +191,16 @@
   align-items: center;
   background: transparent;
   justify-content: center;
-  transition: transform 1s ease;
 }
 
 .input {
-  transform: translateX(-190%);
+  transition: transform 1s ease;
+  transform: translateX(0%);
 }
 
 .inputActive {
-  transform: translateX(0%);
+  transition: transform 1s ease 1s;
+  transform: translateX(-190%);
 }
 
 /* img styles */
@@ -209,16 +210,17 @@
   width: 52%;
   top: 12.5%;
   left: 17.5%;
-  transition: transform 1s ease;
   filter: drop-shadow(0px 0px 17.5px rgba(0, 0, 0, 0.5));
 }
 
 .img {
+  transition: transform 1s ease;
   transform: translateX(200%);
 }
 
 .imgActive {
   cursor: pointer;
+  transition: transform 1s ease 1s;
   transform: translateX(15%);
 }
 
@@ -420,7 +422,7 @@
   filter: drop-shadow(0 0 20px #fffa00);
   cursor: pointer;
   transform: translateX(0%);
-  transition: transform 1s ease;
+  transition: transform 1s ease 1s;
 }
 
 .logoActive:hover{
@@ -441,14 +443,15 @@
   align-items: center;
   text-align: center;
   justify-content: center;
-  transition: transform 1s ease;
 }
 
 .about {
+  transition: transform 1s ease;
   transform: translateX(-197.5%);
 }
 
 .aboutActive {
+  transition: transform 1s ease 1s;
   transform: translateX(0%);
 }
 

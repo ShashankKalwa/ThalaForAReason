@@ -307,7 +307,7 @@ export default function Home() {
             <div id="home">
               <form action="/">
                 <div className={styles.inputWrapper}>
-                  <div className={scrollDirection === 'down' ? styles.inputActive : styles.input}>
+                  <div className={scrollDirection === 'down' ? styles.input : styles.inputActive}>
                     <p className={styles.p}>Give Your Input</p>
                     <div className={styles.sep}></div>
                     <textarea className={styles.txt} value={inputValue} onChange={handleInputChange} name="txt" rows="7" />
