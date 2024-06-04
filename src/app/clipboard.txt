@@ -1,0 +1,14 @@
+
+
+/* @keyframes animateLogo {
+  0%{
+    transform: translateX(-170%);
+  }
+  100% {
+    transform: translateX(0%);
+    transition: transform 1s ease;
+  }
+} */
+
+
+/* animation: animateLogo 1s ease forwards 4s; */
