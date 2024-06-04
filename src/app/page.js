@@ -296,16 +296,16 @@ export default function Home() {
         <div className={scrollDirection === 'down' ? styles.screenActive : styles.screen} >
           <header className={scrollDirection === 'down' ? styles.headerActive : styles.header}>
             
-            <a href="/">Thala.in</a>
+            <a href="/">Thala For A Reason</a>
             <ul>
-              <li><a href="/" className={styles.h} onClick={simulateScrollUp}>Home</a></li>
-              <li><a href="/" className={styles.a} onClick={simulateScrollDown}>About</a></li>
+              <li><a href="#" className={styles.h} onClick={simulateScrollUp}>Home</a></li>
+              <li><a href="#" className={styles.a} onClick={simulateScrollDown}>About</a></li>
             </ul>
           </header>
 
           <div className={styles.all}>
             <div id="home">
-              <form action="/">
+              <form action="#">
                 <div className={styles.inputWrapper}>
                   <div className={scrollDirection === 'down' ? styles.input : styles.inputActive}>
                     <p className={styles.p}>Give Your Input</p>
@@ -316,7 +316,7 @@ export default function Home() {
                     <div className={isActive ? styles.activeClass : styles.inactiveClass}>{res}</div>
 
                   </div>
-                  <Image className={scrollDirection === 'down' ? styles.imgActive : styles.img} src="/seven.png" alt="Logo" width={500} height={300} unoptimized= {true} onClick={() => window.open('https://en.wikipedia.org/wiki/MS_Dhoni')}/>
+                  <Image className={scrollDirection === 'down' ? styles.imgActive : styles.img} src="/seven.png" alt="Logo" width={1} height={1} unoptimized= {true} onClick={() => window.open('https://en.wikipedia.org/wiki/MS_Dhoni')}/>
                 </div>
               </form>
               <div className={styles.divider}></div>
@@ -330,8 +330,8 @@ export default function Home() {
                       <div className={styles.insta} onClick={() => window.open('https://www.instagram.com/shashank.k2211?igsh=aGgzajNrOXl6bjlj')}></div>
                       <div className={styles.linked} onClick={() => window.open('https://www.linkedin.com/in/shashank-kalwa-6462302a4/')}></div>
                       <div className={styles.github} onClick={() => window.open('https://github.com/ShashankKalwa')}></div>
-                      <div className={styles.mail} onClick={() => window.open(`mailto:${mailpart1}${mailpart2}${mailpart3}@${domainpart1}${domainpart2}`)}>E-Mail</div>
-                      <div className={styles.portfolio} onClick={() => alert("Currently Not Available !!!")}>Portfolio</div>
+                      <div className={styles.mail} onClick={() => window.open(`mailto:${mailpart1}${mailpart2}${mailpart3}@${domainpart1}${domainpart2}`)}>E-MAIL</div>
+                      <div className={styles.portfolio} onClick={() => alert("Currently Not Available !!!")}>PORTFOLIO</div>
                     </div>
 
                     <div className={styles.alert}>Audio By : <div className={styles.credit} onClick={() => window.open('https://youtu.be/Q8iwyMc5bJc?feature=shared')}> Dwayne ( DJ ) Bravo </div>!! This website is created solely for entertainment purposes. It is a fun project and is not intended to serve any practical use or provide any benefits. Any interactions or activities on this website are to be considered recreational and should not be relied upon for any serious purposes. Enjoy your time here. !!</div>

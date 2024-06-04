@@ -181,10 +181,10 @@
 /* Input styles */
 .input, .inputActive {
   position: absolute;
-  width: 52.25%;
+  width: 50%;
   height: 71%;
   top: 14%;
-  left: 124%;
+  left: 120%;
   display: flex;
   box-shadow: 0 0 17.5px rgba(0, 0, 0, 0.75);
   overflow: hidden;
@@ -206,26 +206,27 @@
 /* img styles */
 .img, .imgActive {
   position: absolute;
-  height: 75%;
-  width: 52%;
-  top: 12.5%;
-  left: 17.5%;
+  height: 65%;
+  width: 32%;
+  top: 16.75%;
+  left: 33.5%;
   filter: drop-shadow(0px 0px 17.5px rgba(0, 0, 0, 0.5));
 }
 
 .img {
   transition: transform 1s ease;
-  transform: translateX(200%);
+  transform: translateX(250%);
 }
 
 .imgActive {
   cursor: pointer;
   transition: transform 1s ease 1s;
-  transform: translateX(15%);
+  transform: translateX(0%);
 }
 
 .imgActive:hover{
-  transform: translateX(15%) scale(1.075);
+  transition: transform 1s ease;
+  transform: scale(1.075);
 }
 
 /* P styles */
@@ -253,7 +254,7 @@
   position: absolute;
   height: 0.75%;
   width: 100%;
-  top: 11%;
+  top: 10.65%;
   background-color: #eec305;
   border-radius: 1000%;
 }
@@ -347,7 +348,7 @@
 .divider {
   position: absolute;
   top: 50%;
-  left: 49.75%;
+  left: 49.7%;
   right: 50%;
   width: 0.6%;
   height: 1.2%;
@@ -379,7 +380,7 @@
       top: 50%;
   }
   100% {
-      left: 49.75%;
+      left: 49.7%;
       height: 80%;
       width: 0.6%;
       top: 13%;
@@ -426,6 +427,7 @@
 }
 
 .logoActive:hover{
+  transition: transform 1s ease;
   transform: scale(1.075);
 }
 
@@ -435,7 +437,7 @@
   width: 50%;
   height: 71%;
   top: 14%;
-  left: 23.5%;
+  left: 24.5%;
   display: block;
   box-shadow: 0 0 17.5px rgba(0, 0, 0, 0.75);
   overflow: hidden;
@@ -572,7 +574,7 @@
   color: #FFF;
   letter-spacing: 2.5px;
   font-size: large;
-  font-weight: bolder;
+  font-weight: bold;
   line-height: 43.75px;
   height: 32.5%;
   width: 45%;
