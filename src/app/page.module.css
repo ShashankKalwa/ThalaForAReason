@@ -200,6 +200,8 @@
 }
 
 .inputActive {
+  will-change: transform;
+  contain: content;
   transition: transform 1s ease 1s;
   transform: translateX(-190%);
 }
@@ -223,7 +225,7 @@
   cursor: pointer;
   will-change: transform;
   contain: content;
-  transition: transform 1s ease 1s;
+  transition: transform 1s ease 1.5s;
   transform: translateX(0%) translateZ(0);
 }
 
@@ -414,7 +416,7 @@
   left: 19%;
   filter: drop-shadow(0 0 20px #fffa00);
   transform: translateX(-170%) translateZ(0);
-  transition: transform 1s ease;
+  transition: transform 1s ease 0.75s;
 }
 
 .logoActive{
@@ -458,7 +460,7 @@
 }
 
 .aboutActive {
-  transition: transform 1s ease 1s;
+  transition: transform 1s ease 2s;
   transform: translateX(0%);
 }
 
