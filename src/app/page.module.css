@@ -195,7 +195,7 @@
 }
 
 .input {
-  transition: transform 1s ease;
+  transition: transform 1.25s ease;
   transform: translateX(0%);
 }
 
