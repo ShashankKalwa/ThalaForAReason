@@ -221,13 +221,15 @@
 
 .imgActive {
   cursor: pointer;
+  will-change: transform;
+  contain: content;
   transition: transform 1s ease 1s;
-  transform: translateX(0%);
+  transform: translateX(0%) translateZ(0);
 }
 
 .imgActive:hover{
   transition: transform 1s ease;
-  transform: scale(1.075);
+  transform: scale(1.075) translateZ(0);
 }
 
 /* P styles */
@@ -411,7 +413,7 @@
   width: 60%;
   left: 19%;
   filter: drop-shadow(0 0 20px #fffa00);
-  transform: translateX(-170%);
+  transform: translateX(-170%) translateZ(0);
   transition: transform 1s ease;
 }
 
@@ -423,13 +425,15 @@
   left: 19%;
   filter: drop-shadow(0 0 20px #fffa00);
   cursor: pointer;
-  transform: translateX(0%);
+  will-change: transform;
+  contain: content;
+  transform: translateX(0%) translateZ(0);
   transition: transform 1s ease 1s;
 }
 
-.logoActive:hover{
+.logoActive:not(.no-hover):hover {
   transition: transform 1s ease;
-  transform: scale(1.075);
+  transform: scale(1.075) translateZ(0);
 }
 
 /* About styles */
