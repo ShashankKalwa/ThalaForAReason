@@ -14,16 +14,15 @@
   font-display: swap;
   background: linear-gradient(90deg, #F15C19, #eec305, #3040cc, #00a5f1);
   background-size: 350%, 350%;
+  transition: background-position 1s ease;
 }
 
 .screen {
   background-position: 0% 50%;
-  transition: background-position 1s ease;
 }
 
 .screenActive {
   background-position: 100% 50%;
-  transition: background-position 1s ease 1.25s;
 }
 
 /* Header styles */
@@ -37,17 +36,16 @@
   align-items: center;
   width: 100%;
   background-size: 350%, 350%;
+  transition: background-position 1s ease;
   z-index: 0;
 }
 
 .header {
   background-position: 100% 50%;
-  transition: background-position 1s ease;
 }
 
 .headerActive {
   background-position: 0% 50%;
-  transition: background-position 1s ease 1.25s;
 }
 
 /* Header link styles */
@@ -66,7 +64,7 @@
   background-repeat: no-repeat;
   background-size: 0% 10%;
   background-position-x: right;
-  transition: letter-spacing 250ms ease, color 1s ease 1s;
+  transition: letter-spacing 250ms ease, color 1s ease;
 }
 
 .header a {
@@ -102,7 +100,7 @@
   text-transform: capitalize;
   border: 1px transparent #fff;
   background-repeat: no-repeat;
-  transition: background-size 500ms ease, color 500ms ease 1s;
+  transition: background-size 500ms ease, color 500ms ease;
 }
 
 .header ul li .h, .header ul li .a {
@@ -197,13 +195,11 @@
 }
 
 .input {
-  transition: transform 1.25s ease;
+  transition: transform 1s ease;
   transform: translateX(0%);
 }
 
 .inputActive {
-  will-change: transform;
-  contain: content;
   transition: transform 1s ease 1s;
   transform: translateX(-190%);
 }
@@ -227,7 +223,7 @@
   cursor: pointer;
   will-change: transform;
   contain: content;
-  transition: transform 1s ease 1.5s;
+  transition: transform 1s ease 1s;
   transform: translateX(0%) translateZ(0);
 }
 
@@ -418,7 +414,7 @@
   left: 19%;
   filter: drop-shadow(0 0 20px #fffa00);
   transform: translateX(-170%) translateZ(0);
-  transition: transform 1s ease 0.75s;
+  transition: transform 1s ease;
 }
 
 .logoActive{
@@ -462,7 +458,7 @@
 }
 
 .aboutActive {
-  transition: transform 1s ease 2s;
+  transition: transform 1s ease 1s;
   transform: translateX(0%);
 }
 
