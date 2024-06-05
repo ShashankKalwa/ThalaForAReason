@@ -14,15 +14,16 @@
   font-display: swap;
   background: linear-gradient(90deg, #F15C19, #eec305, #3040cc, #00a5f1);
   background-size: 350%, 350%;
-  transition: background-position 1s ease;
 }
 
 .screen {
   background-position: 0% 50%;
+  transition: background-position 1s ease;
 }
 
 .screenActive {
   background-position: 100% 50%;
+  transition: background-position 1s ease 1.25s;
 }
 
 /* Header styles */
@@ -36,16 +37,17 @@
   align-items: center;
   width: 100%;
   background-size: 350%, 350%;
-  transition: background-position 1s ease;
   z-index: 0;
 }
 
 .header {
   background-position: 100% 50%;
+  transition: background-position 1s ease;
 }
 
 .headerActive {
   background-position: 0% 50%;
+  transition: background-position 1s ease 1.25s;
 }
 
 /* Header link styles */
@@ -64,7 +66,7 @@
   background-repeat: no-repeat;
   background-size: 0% 10%;
   background-position-x: right;
-  transition: text-transform 250ms ease, letter-spacing 250ms ease, color 1s ease;
+  transition: letter-spacing 250ms ease, color 1s ease 1s;
 }
 
 .header a {
@@ -100,7 +102,7 @@
   text-transform: capitalize;
   border: 1px transparent #fff;
   background-repeat: no-repeat;
-  transition: background-size 500ms ease, color 500ms ease;
+  transition: background-size 500ms ease, color 500ms ease 1s;
 }
 
 .header ul li .h, .header ul li .a {
