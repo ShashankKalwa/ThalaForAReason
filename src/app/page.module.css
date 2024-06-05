@@ -227,7 +227,7 @@
   transform: translateX(0%) translateZ(0);
 }
 
-.imgActive:hover{
+.imgActive:not(.no-hover):hover{
   transition: transform 1s ease;
   transform: scale(1.075) translateZ(0);
 }
