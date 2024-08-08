@@ -492,7 +492,7 @@
 }
 
 .divider::before{
-    filter: blur(1rem);
+    filter: blur(0.5rem);
 }
 
 @keyframes load {
@@ -518,6 +518,8 @@
         height: 0%;    
     }
     100%{
+      width: 0%;
+      height: 0%;  
       visibility: hidden;
     }
 }
