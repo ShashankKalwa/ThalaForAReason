@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 import styles from './page.module.css';
 
 // Main function
-function Home(){
+function Home() {
   // State variables
   const [isMobile, setIsMobile] = useState(false);
   const [isActive, setIsActive] = useState(false);
