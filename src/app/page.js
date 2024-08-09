@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import styles from './page.module.css';
+import { throttle } from 'lodash';
 
 // Main function
 function Home() {
@@ -169,6 +170,24 @@ function Home() {
 
   }, [inputValue, btntxt, isActive, setIsActive, setbtntxt, setRes, toggleAudio]);
 
+
+    const handleScroll = useCallback(throttle((event) => {
+      setHasScrolled(true);
+      if (event.deltaY > 0) {
+        setScrollDirection('down');
+      } else {
+        setScrollDirection('up');
+      }
+    }, 200), [setHasScrolled, setScrollDirection]);
+    
+    const handleResize = useCallback(() => {
+      const isMobileNow = /Mobi|Android|iPhone/i.test(navigator.userAgent);
+      if (isMobile !== isMobileNow) {
+        setIsMobile(isMobileNow);
+      }
+    }, [isMobile]);
+
+
   // useEffect hook
   useEffect(() => {
     // Check if mobile
@@ -179,24 +198,10 @@ function Home() {
     checkIfMobile();
 
     // Event handlers
-    const handleResize = () => {
-      if (isMobile && !/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
-        window.location.reload();
-      }
-    };
 
     const handleKeyDown = (event) => {
       if (event.key === 'Enter') {
         displayInput();
-      }
-    };
-
-    const handleScroll = (event) => {
-      setHasScrolled(true);
-      if (event.deltaY > 0) {
-        setScrollDirection('down');
-      } else {
-        setScrollDirection('up');
       }
     };
 
@@ -206,9 +211,9 @@ function Home() {
     };
 
     // Event listeners
-    window.addEventListener('resize', handleResize);
     window.addEventListener('keydown', handleKeyDown);
     window.addEventListener('wheel', handleScroll);
+    window.addEventListener('resize', handleResize);
 
     const audioElement = audioRef.current;
     if (audioElement) {
@@ -224,7 +229,7 @@ function Home() {
       window.removeEventListener('wheel', handleScroll);
       window.removeEventListener('resize', handleResize);
     };
-  }, [res, isActive, isMobile, displayInput]);
+  }, [res, isActive, isMobile, displayInput, handleScroll, handleResize]);
 
   return (
     <>
@@ -248,7 +253,7 @@ function Home() {
                   <div className={styles.sep}></div>
                   <textarea className={styles.txt} value={inputValue} onChange={handleInputChange} name="txt" rows="7" />
                   <div className={styles.btn} onClick={displayInput}><p>{btntxt}</p></div>
-                  <audio ref={audioRef} src="/dhonisong.wav" />
+                  <audio ref={audioRef} preload="auto" src="/dhonisong.wav" />
                   <div className={isActive ? styles.activeClass : styles.inactiveClass}>{res}</div>
                 </div>
                 <Image className={scrollDirection === 'down' ? styles.imgActive : styles.img} src="/images/seven.png" alt="Logo" width={300} height={300} unoptimized={true} loading='lazy' onClick={() => window.open('https://en.wikipedia.org/wiki/MS_Dhoni')} />
