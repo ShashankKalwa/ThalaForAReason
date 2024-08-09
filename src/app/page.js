@@ -81,25 +81,29 @@ function Home() {
 
         var two = inputTrimmed.replace(/[\s_\-\/\\]/g, '').toLowerCase();
 
-        if (wordCount === 7) {
-          setRes("THALA For A Reason!");
+        if(inputLength == 7){
+          setRes("7 Letters. THALA For A Reason!");
+          flag = true;
+          toggleAudio(true);
+        } else if (wordCount === 7) {
+          setRes("7 Words. THALA For A Reason!");
           flag = true;
           toggleAudio(true);
         } else if (no == 7) {
-          setRes("THALA For A Reason!");
+          setRes("You Know. THALA For A Reason!");
           flag = true;
           toggleAudio(true);
         } else if (no % 7 == 0) {
-          setRes("THALA For A Reason!");
+          setRes("Divisible By 7. THALA For A Reason!");
           flag = true;
           toggleAudio(true);
         } else if (sum_of_digits == 7) {
-          setRes("THALA For A Reason!");
+          setRes("Summation Is 7. THALA For A Reason!");
           flag = true;
           toggleAudio(true);
         } else if (!isAlphabet(inputTrimmed)) {
           if (sum_of_digits !== 0 && sum_of_digits % 7 === 0) {
-            setRes("THALA For A Reason!");
+            setRes("Summation Is Divisible By 7. THALA For A Reason!");
             flag = true;
             toggleAudio(true);
           }
@@ -165,7 +169,7 @@ function Home() {
       setbtntxt('Stop');
     } else {
       setbtntxt('Check');
-      setTimeout(() => toggleAudio(false), 0);
+      setTimeout(() => toggleAudio(false), 0.1);
     }
 
   }, [inputValue, btntxt, isActive, setIsActive, setbtntxt, setRes, toggleAudio]);
@@ -178,7 +182,7 @@ function Home() {
       } else {
         setScrollDirection('up');
       }
-    }, 200), [setHasScrolled, setScrollDirection]);
+    }, 1000), [setHasScrolled, setScrollDirection]);
     
     const handleResize = useCallback(() => {
       const isMobileNow = /Mobi|Android|iPhone/i.test(navigator.userAgent);
