@@ -804,3 +804,17 @@
 .credit {
   letter-spacing: 1px;
 }
+
+.foot,
+.footActive{
+  position: absolute;
+  width: 100%;
+  min-height: 2.5%;
+  top: 97.5%;
+  letter-spacing: 1px;
+  font-size: 80%;
+  background-color: #00000034;
+  color: #fff;
+  border-top: 1px solid transparent;
+  align-content: center;
+}

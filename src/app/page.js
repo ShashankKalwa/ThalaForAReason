@@ -76,7 +76,7 @@ function Home() {
         }
 
         function isAlphabet(str) {
-          return /^[a-zA-Z]+$/.test(str);
+          return (/^[a-zA-Z]+$/.test(str));
         }
 
         var two = inputTrimmed.replace(/[\s_\-\/\\]/g, '').toLowerCase();
@@ -283,6 +283,7 @@ function Home() {
               </div>
             </div>
           </div>
+          <footer className={scrollDirection === 'down' ? styles.footActive : styles.foot}><center>Best viewed at <b>1920 x 1080 Resolution</b> with <b>100% Scale.</b></center></footer>
         </div>
       )}
     </>
