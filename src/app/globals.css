@@ -1,7 +1,15 @@
+:root {
+  --header-height: 6vh;
+  --main-padding: 5vw;
+  --font-base: 1.1rem;
+  --font-large: 1.5rem;
+  --font-small: 0.9rem;
+}
+
 *{
   margin: 0%;
   padding: 0;
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 body{
@@ -15,4 +23,14 @@ body{
   background:linear-gradient(to right,#F15C19, #F9CD05);
   background-size: cover;
   overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --header-height: 8vh;
+    --main-padding: 2vw;
+    --font-base: 1rem;
+    --font-large: 1.2rem;
+    --font-small: 0.8rem;
+  }
 }

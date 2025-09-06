@@ -1,5 +1,5 @@
 /* General styles */
-.screen, 
+.screen,
 .header {
   background-size: cover;
   background-repeat: no-repeat;
@@ -7,36 +7,13 @@
 }
 
 /* Body styles */
-.screen, 
+.screen,
 .screenActive {
-  scroll-behavior: smooth;
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
-  font-display: swap;
-  background: linear-gradient(
-    90deg, 
-    #F15C19, 
-    #eec305, 
-    #3040cc, 
-    #00a5f1);
+  background: linear-gradient(90deg, #f15c19, #eec305, #3040cc, #00a5f1);
   background-size: 350%, 350%;
   transition: background-position 1s ease;
-  animation: zindex 5s forwards;
-  z-index: -1;
-}
-
-@keyframes zindex {
-  0%{
-    z-index: -1;
-  }
-  100%{
-    z-index: 0;
-  }
-}
-
-.screen {
-  background-position: 0% 50%;
+  z-index: 0;
 }
 
 .screenActive {
@@ -44,14 +21,9 @@
 }
 
 /* Header styles */
-.header, 
+.header,
 .headerActive {
-  background: linear-gradient(
-    90deg, 
-    #00a5f1, 
-    #3040cc, 
-    #eec305, 
-    #F15C19);
+  background: linear-gradient(90deg, #00a5f1, #3040cc, #eec305, #f15c19);
   height: 6%;
   position: fixed;
   margin: 0;
@@ -73,32 +45,29 @@
 }
 
 /* Header link styles */
-.header a, 
-.header ul li a, 
-.headerActive a, 
+.header a,
+.header ul li a,
+.headerActive a,
 .headerActive ul li a {
-  position: relative;
   text-decoration: none;
 }
 
-.header a, 
+.header a,
 .headerActive a {
-  margin-right: 35%;
   text-transform: uppercase;
   letter-spacing: 10px;
-  font-size: 135%;
+  font-size: 110%;
   font-weight: bold;
   background-position-y: bottom;
   background-repeat: no-repeat;
   background-size: 0% 10%;
   background-position-x: right;
-  transition: letter-spacing 250ms ease, 
-              color 1s ease;
+  transition: letter-spacing 250ms ease, color 1s ease;
 }
 
 .header a {
-  color: #F15C19;
-  background-image: linear-gradient(#F15C19, #F15C19);
+  color: #f15c19;
+  background-image: linear-gradient(#f15c19, #f15c19);
 }
 
 .headerActive a {
@@ -107,81 +76,81 @@
 }
 
 /* Header list styles */
-.header ul, 
+.header ul,
 .headerActive ul {
-  position: absolute;
-  padding-left: 72%;
+  /* background-color: #00fa9a; */
+  position: fixed;
+  padding-left: 79%;
   display: inline-flex;
 }
 
-.header ul li, 
+.header ul li,
 .headerActive ul li {
   list-style: none;
 }
 
-.header ul li a, 
+.header ul li a,
 .headerActive ul li a {
   margin: 0 15px;
   padding: 5px 20px;
 }
 
-.header ul li .h, 
-.header ul li .a, 
-.headerActive ul li .h, 
+.header ul li .h,
+.header ul li .a,
+.headerActive ul li .h,
 .headerActive ul li .a {
   font-weight: bold;
-  font-size: 105%;
+  font-size: 100%;
   letter-spacing: normal;
   text-transform: capitalize;
   border: 1px transparent #fff;
   background-repeat: no-repeat;
-  transition: background-size 500ms ease, 
-              color 500ms ease;
+  transition: background-size 500ms ease, color 500ms ease;
 }
 
-.header ul li .h, 
+.header ul li .h,
 .header ul li .a {
-  color: #F9CD05;
-  background-image: linear-gradient(#F9CD05, #F9CD05);
+  color: #f9cd05;
+  background-image: linear-gradient(#f9cd05, #f9cd05);
 }
 
-.headerActive ul li .h, 
+.headerActive ul li .h,
 .headerActive ul li .a {
   color: #00aeff;
   background-image: linear-gradient(#00aeff, #00aeff);
 }
 
-.header ul li .h, 
-.header ul li .a, 
-.headerActive ul li .h, 
+.header ul li .h,
+.header ul li .a,
+.headerActive ul li .h,
 .headerActive ul li .a {
   background-size: 0% 100%;
 }
 
-.header ul li .h, 
+.header ul li .h,
 .headerActive ul li .h {
   background-position-x: right;
 }
 
-.header ul li .a, 
+.header ul li .a,
 .headerActive ul li .a {
   background-position-x: left;
 }
 
-.header ul li .h:hover, 
-.header ul li .a:hover, 
-.headerActive ul li .h:hover, 
+.header ul li .h:hover,
+.header ul li .a:hover,
+.headerActive ul li .h:hover,
 .headerActive ul li .a:hover {
   background-size: 100% 100%;
   background-position-x: center;
 }
 
-.header ul li .h:hover, 
+.header ul li .h:hover,
 .header ul li .a:hover {
-  color: #F15C19;
+  color: #f15c19;
 }
 
-.headerActive ul li .h:hover, 
+.headerActive ul li .h:hover,
 .headerActive ul li .a:hover {
   color: #3040cc;
 }
@@ -192,7 +161,7 @@
   text-align: center;
   align-items: center;
   justify-content: center;
-  color: #FFF;
+  color: #fff;
   font-weight: bolder;
   font-size: medium;
   text-transform: uppercase;
@@ -212,23 +181,24 @@
   right: 90%;
   visibility: hidden;
   animation: wipeReveal 0.8s forwards;
-  animation-delay: 8625ms; 
+  animation-delay: 8625ms;
   overflow: hidden;
 }
 
 @keyframes wipeReveal {
   0% {
-      clip-path: inset(0 100% 0 0);
-      visibility: visible;
+    clip-path: inset(0 100% 0 0);
+    visibility: visible;
   }
   100% {
-      clip-path: inset(0);
-      visibility: visible;
+    clip-path: inset(0);
+    visibility: visible;
   }
 }
 
 /* Input styles */
-.input, .inputActive {
+.input,
+.inputActive {
   position: absolute;
   width: 50%;
   height: 71%;
@@ -253,7 +223,8 @@
 }
 
 /* img styles */
-.img, .imgActive {
+.img,
+.imgActive {
   position: absolute;
   height: 65%;
   width: 32%;
@@ -269,13 +240,12 @@
 
 .imgActive {
   cursor: pointer;
-  will-change: transform;
   contain: content;
   transition: transform 1s ease 1s;
   transform: translateX(0%) translateZ(0);
 }
 
-.imgActive:hover{
+.imgActive:hover {
   transition: transform 1s ease;
   transform: scale(1.075) translateZ(0);
 }
@@ -288,7 +258,7 @@
   letter-spacing: 3px;
   font-weight: bold;
   font-size: 135%;
-  background-color: #F15C19;
+  background-color: #f15c19;
   width: 100%;
   height: 7.5%;
   text-align: center;
@@ -328,7 +298,7 @@
 
 .txt:focus {
   border: 3.5px #f9d405 solid;
-  background-color: transparent; 
+  background-color: transparent;
   outline-style: groove;
   color: #fff;
 }
@@ -354,8 +324,7 @@
   text-align: center;
   font-size: 90%;
   letter-spacing: 2.5px;
-  transition: color 750ms ease, 
-              letter-spacing 0.5s ease;
+  transition: color 750ms ease, letter-spacing 0.5s ease;
 }
 
 .btn:hover {
@@ -369,7 +338,8 @@
 }
 
 /* ActiveClass and InactiveClass styles */
-.activeClass, .inactiveClass {
+.activeClass,
+.inactiveClass {
   position: absolute;
   top: 68%;
   height: 32.5%;
@@ -406,50 +376,49 @@
   height: 1.25%;
   border-radius: 10px;
   background-color: #fff;
-  animation:  toLoad 1s forwards 1s, 
-              fromLoad 1s forwards 5s,
-              animateDivider 2s forwards 7.5s, 
-              colorchange 1000ms 6.5s;
+  animation: toLoad 1s forwards 1s, fromLoad 1s forwards 5s,
+    animateDivider 2s forwards 7.5s, colorchange 1000ms 6.5s;
 }
 
 @keyframes toLoad {
-  0%{
-      top: 50%;
-      left: 49.7%;
-      width: 0.6%;
-      height: 1.25%;
+  0% {
+    top: 50%;
+    left: 49.7%;
+    width: 0.6%;
+    height: 1.25%;
   }
-  100%{                
-      top: 49.5%;
-      left: 49.35%;
-      width: 1.25%;
-      height: 2.4%;
+  100% {
+    top: 49.5%;
+    left: 49.35%;
+    width: 1.25%;
+    height: 2.4%;
   }
 }
 
 @keyframes fromLoad {
-  0%{ 
-      top: 49.5%;
-      left: 49.35%;
-      width: 1.25%;
-      height: 2.4%;
+  0% {
+    top: 49.5%;
+    left: 49.35%;
+    width: 1.25%;
+    height: 2.4%;
   }
-  100%{         
-      top: 50%;
-      left: 49.7%;
-      width: 0.6%;
-      height: 1.25%;      
+  100% {
+    top: 50%;
+    left: 49.7%;
+    width: 0.6%;
+    height: 1.25%;
   }
 }
 
-@property --angle{
+@property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
   inherits: false;
 }
 
-.divider::after, .divider::before{
-  content: '';
+.divider::after,
+.divider::before {
+  content: "";
   position: absolute;
   width: 0%;
   height: 0%;
@@ -460,76 +429,85 @@
   transform: -50% -50%;
   visibility: visible;
   background: conic-gradient(
-      from var(--angle),
-      #ff5f6d,
-      #ffc371,
-      #ffd700,
-      #32cd32,
-      #00fa9a,
-      #1e90ff,
-      #9370db,
-      #ff5f6d
+    from var(--angle),
+    #ff5f6d,
+    #ffc371,
+    #ffd700,
+    #32cd32,
+    #00fa9a,
+    #1e90ff,
+    #9370db,
+    #ff5f6d
   );
-  animation:  toAnimate 1s forwards 1s, 
-              load 1.5s forwards 2 1.5s, 
-              fromAnimate 1s forwards 5s;
+  animation: toAnimate 1s forwards 1s, load 1.5s forwards 2 1.5s,
+    fromAnimate 1s forwards 5s;
   z-index: -1;
 }
 
 @keyframes toAnimate {
-    from{              
-        top: 10%;
-        left: 5%;  
-        width: 0%;
-        height: 0%;
-    }
-    to{           
-        top: -27.5%;
-        left: -25%;     
-        width: 112.5%;
-        height: 120%;
-    }
+  from {
+    top: 10%;
+    left: 5%;
+    width: 0%;
+    height: 0%;
+  }
+  to {
+    top: -27.5%;
+    left: -25%;
+    width: 112.5%;
+    height: 120%;
+  }
 }
 
-.divider::before{
-    filter: blur(0.5rem);
+.divider::before {
+  filter: blur(0.5rem);
 }
 
 @keyframes load {
-    from{
-        --angle: 0deg;
-    }
-    to{
-        --angle: 360deg;
-    }
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
 }
 
 @keyframes fromAnimate {
-    0%{      
-        top: -17.5%;
-        left: -16.5%;     
-        width: 95%;
-        height: 100%;       
-    }
-    99%{      
-        top: 10%;
-        left: 5%;  
-        width: 0%;
-        height: 0%;    
-    }
-    100%{
-      width: 0%;
-      height: 0%;  
-      visibility: hidden;
-    }
+  0% {
+    top: -17.5%;
+    left: -16.5%;
+    width: 95%;
+    height: 100%;
+  }
+  99% {
+    top: 10%;
+    left: 5%;
+    width: 0%;
+    height: 0%;
+  }
+  100% {
+    width: 0%;
+    height: 0%;
+    visibility: hidden;
+  }
 }
 
 @keyframes colorchange {
-  0%   {background-color: #fff;}
-  25%  {background-color: blue;}
-  50%  {background-color: #f3601c;}
-  75%  {background-color: #f9d405;}
-  100% {background-color: #fff;}
+  0% {
+    background-color: #fff;
+  }
+  25% {
+    background-color: blue;
+  }
+  50% {
+    background-color: #f3601c;
+  }
+  75% {
+    background-color: #f9d405;
+  }
+  100% {
+    background-color: #fff;
+  }
 }
 
 @keyframes animateDivider {
@@ -540,16 +518,16 @@
     top: 50%;
   }
   50% {
-      left: 0;
-      height: 1.2%;
-      width: 0.6%;
-      top: 50%;
+    left: 0;
+    height: 1.2%;
+    width: 0.6%;
+    top: 50%;
   }
   100% {
-      left: 49.7%;
-      height: 80%;
-      width: 0.6%;
-      top: 13%;
+    left: 49.7%;
+    height: 80%;
+    width: 0.6%;
+    top: 13%;
   }
 }
 
@@ -570,7 +548,7 @@
 }
 
 /* logo styles */
-.logo{
+.logo {
   position: absolute;
   top: 20%;
   height: 60%;
@@ -581,7 +559,7 @@
   transition: transform 1s ease;
 }
 
-.logoActive{
+.logoActive {
   position: absolute;
   top: 20%;
   height: 60%;
@@ -601,7 +579,7 @@
 }
 
 /* About styles */
-.about, 
+.about,
 .aboutActive {
   position: absolute;
   width: 50%;
@@ -673,7 +651,7 @@
   background-size: 0% 10%;
   background-image: linear-gradient(#ff5100, #ff7839);
   background-repeat: no-repeat;
-  transition: background-size 750ms ease, letter-spacing 750ms ease,
+  transition: background-size 750ms ease, letter-spacing 750ms ease;
 }
 
 .abt p a:hover {
@@ -711,8 +689,8 @@
   transform: translateX(225%);
 }
 
-.insta, 
-.linked, 
+.insta,
+.linked,
 .github {
   position: absolute;
   background-position: center;
@@ -727,16 +705,16 @@
   transition: background-size 0.5s ease;
 }
 
-.insta:hover, 
-.linked:hover, 
+.insta:hover,
+.linked:hover,
 .github:hover {
   background-size: 125%;
 }
 
-.mail, 
+.mail,
 .portfolio {
   position: absolute;
-  color: #FFF;
+  color: #fff;
   letter-spacing: 2.5px;
   font-size: large;
   font-weight: bold;
@@ -762,7 +740,7 @@
   transform: translateX(8.5%);
 }
 
-.mail:hover, 
+.mail:hover,
 .portfolio:hover {
   letter-spacing: 5px;
 }
@@ -800,13 +778,12 @@
   transition: letter-spacing 0.5s ease;
 }
 
-.alert:hover 
-.credit {
+.alert:hover .credit {
   letter-spacing: 1px;
 }
 
 .foot,
-.footActive{
+.footActive {
   position: absolute;
   width: 100%;
   min-height: 2.5%;
